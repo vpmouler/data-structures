@@ -11,15 +11,14 @@ var Queue = function() {
 
 queueMethods.enqueue = function(value) {
   this.storage[this.count++] = value;
-  
-}
+};
 
 queueMethods.dequeue = function() {
   var firstElement = this.storage[Object.keys(this.storage)[0]];
   delete this.storage[Object.keys(this.storage)[0]];
   return firstElement;
-}
+};
 
 queueMethods.size = function() {
   return Object.keys(this.storage).length;
-}
+};
