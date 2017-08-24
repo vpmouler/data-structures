@@ -13,18 +13,18 @@ var stackMethods = {};
 stackMethods.push = function(value) {
   this.storage[this.count] = value;
   this.count++;
-}
+};
 
 stackMethods.pop = function() {
-	var lastElement = this.storage[Object.keys(this.storage).length-1];
-	delete this.storage[Object.keys(this.storage).length-1];
-	this.count--;
-	return lastElement;
-} 
+  var lastElement = this.storage[Object.keys(this.storage).length - 1];
+  delete this.storage[Object.keys(this.storage).length - 1];
+  this.count--;
+  return lastElement;
+}; 
 
 stackMethods.size = function() {
   return Object.keys(this.storage).length;
-}
+};
 
 // testing what 'this' refers to in .push method
 // var obj1 = Stack();
