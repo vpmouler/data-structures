@@ -19,12 +19,13 @@ queueMethods.enqueue = function(value){
 queueMethods.dequeue = function(){
   var firstEl = this.storage[Object.keys(this.storage)[0]];
   delete this.storage[Object.keys(this.storage)[0]];
-  this.count--;
+  // this.count--;
   return firstEl;
 };
 
 queueMethods.size = function(){
   return Object.keys(this.storage).length;
+  
 };
 
 queue.enqueue('a');
